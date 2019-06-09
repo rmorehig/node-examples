@@ -6,8 +6,11 @@ const port = 3000;
 const morgan = require('morgan');
 const app = express();
 const dishRouter = require('./routes/dishRouter');
-
+const promoRouter = require('./routes/promoRouter');
+const leaderRouter = require('./routes/leaderRouter');
 app.use('/dishes', dishRouter);
+app.use('/promotions', promoRouter);
+app.use('/leaders', leaderRouter);
 
 app.use(morgan('dev'));
 
